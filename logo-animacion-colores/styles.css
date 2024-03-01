@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: black;
+}
+
+.fa-github {
+  color: white;
+  position: relative;
+  font-size: 100px;
+  text-shadow: 0 0 50px #00ff18, 0 0 100px #00ff18, 0 0 150px #00ff18,
+    0 0 200px #00ff18, 0 0 250px #00ff18;
+  animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
