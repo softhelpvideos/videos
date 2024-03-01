@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.cargando {
+  display: flex;
+  position: relative;
+  gap: 18px;
+}
+
+.barra {
+  height: 25px;
+  width: 5px;
+  position: relative;
+}
+
+.barra::before {
+  content: "";
+  inset: 0;
+  position: absolute;
+  animation: animacion 8s linear infinite;
+  animation-delay: calc(var(--i) * 0.1s);
+}
+
+@keyframes animacion {
+  0% {
+    background: green;
+    box-shadow: 0 0 5px green, 0 0 15px green, 0 0 30px green, 0 0 40px green;
+  }
+  25% {
+    background: orange;
+    box-shadow: 0 0 5px orange, 0 0 15px orange, 0 0 30px orange;
+    rotate: 0deg;
+  }
+  40% {
+    background: orange;
+    box-shadow: 0 0 5px orange, 0 0 15px orange, 0 0 30px orange;
+    rotate: 90deg;
+    filter: hue-rotate(0deg);
+    transform-origin: bottom;
+  }
+  80% {
+    background: orange;
+    box-shadow: 0 0 5px orange, 0 0 15px orange, 0 0 30px orange;
+    rotate: 90deg;
+    filter: hue-rotate(360deg);
+    transform-origin: bottom;
+  }
+  90% {
+    background: black;
+    box-shadow: none;
+    rotate: 0deg;
+  }
+  100% {
+    background: black;
+    box-shadow: none;
+    rotate: 0deg;
+  }
+}
