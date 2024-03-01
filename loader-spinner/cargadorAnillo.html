@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spinner iluminado</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #111;
+      }
+
+      .cargador {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: linear-gradient(45deg, transparent 40%, lime);
+        animation: efecto 2s linear infinite;
+      }
+
+      @keyframes efecto {
+        0% {
+          transform: rotate(0deg);
+          filter: hue-rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+          filter: hue-rotate(360deg);
+        }
+      }
+      .cargador::before {
+        content: " ";
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        background: #222;
+        border-radius: 50%;
+        z-index: 2;
+      }
+      .cargador::after {
+        content: " ";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        background: linear-gradient(45deg, transparent 40%, lime);
+        border-radius: 50%;
+        z-index: 1;
+        filter: blur(20px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cargador"></div>
+  </body>
+</html>
