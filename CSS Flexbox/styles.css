@@ -1,0 +1,36 @@
+body {
+  background-color: black;
+  font-family: serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.header {
+  background-color: #67ceeb;
+  height: 120px;
+  width: 100%;
+}
+
+.footer {
+  background-color: #dda0dd;
+  height: 120px;
+  width: 100%;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.elem {
+  background-color: #63d663;
+  height: 120px;
+  width: 300px;
+}
