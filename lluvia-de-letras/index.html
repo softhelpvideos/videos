@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Lluvia de letras</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="cloud"></div>
+    </div>
+    <script>
+      function randomText() {
+        var text = "abcdefghijklmnñopqrstuvwxyz";
+        let letter = text[Math.floor(Math.random() * text.length)];
+        return letter;
+      }
+
+      function rain() {
+        let cloud = document.querySelector(".cloud");
+        let elem = document.createElement("div");
+        let left = Math.floor(Math.random() * 280);
+        let duration = 1 + Math.random() * 1;
+        let size = Math.random() * 1.4;
+        elem.classList.add("text");
+        cloud.appendChild(elem);
+        elem.innerText = randomText();
+        elem.style.left = 10 + left + "px";
+        elem.style.fontSize = 0.5 + size + "em";
+        elem.style.animationDurationtion = duration + "s";
+
+        setTimeout(function () {
+          cloud.removeChild(elem);
+        }, 2000);
+      }
+      setInterval(function () {
+        rain();
+      }, 20);
+    </script>
+  </body>
+</html>
