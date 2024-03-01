@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #222;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+.burbujas {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: auto;
+  height: 100vh;
+}
+
+.burbuja {
+  background: red;
+  width: 5%;
+  height: 5%;
+  position: relative;
+  border-radius: 50%;
+  animation: animate 15s linear infinite;
+  animation-duration: calc(120s / var(--i));
+}
+
+.burbuja:nth-child(odd) {
+  background: #38fe4f;
+  box-shadow: 0 0 20px rgba(3, 230, 3, 0.5), 0 0 40px rgba(3, 179, 3, 0.5),
+    0 0 60px rgba(3, 140, 3, 0.5);
+}
+.burbuja:nth-child(even) {
+  background: #fd00d3;
+  box-shadow: 0 0 20px rgba(253, 0, 211, 0.5), 0 0 40px rgba(253, 0, 211, 0.5),
+    0 0 60px rgba(253, 0, 211, 0.5);
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(100vh) scale(0);
+  }
+  100% {
+    transform: translateY(-10vh) scale(1);
+  }
+}

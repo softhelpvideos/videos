@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Animación pelotas subiendo</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        min-height: 100vh;
+        background: #222;
+      }
+      .burbujas {
+        display: flex;
+        justify-content: center;
+        width: auto;
+        height: 100vh;
+        position: relative;
+      }
+
+      .burbuja {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        animation: animate 20s linear infinite;
+        animation-duration: calc(60s / var(--i));
+
+        background: #00ff18;
+        box-shadow: 0 0 20px rgba(3, 230, 3, 0.5), 0 0 40px rgba(3, 179, 3, 0.5),
+          0 0 60px rgba(3, 104, 3, 0.5);
+      }
+
+      @keyframes animate {
+        0% {
+          transform: translateY(100vh) scale(0);
+          filter: hue-rotate(0deg);
+        }
+        100% {
+          transform: translateY(-10vh) scale(1);
+          filter: hue-rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="burbujas">
+      <span class="burbuja" style="--i: 10"></span>
+      <span class="burbuja" style="--i: 32"></span>
+      <span class="burbuja" style="--i: 7"></span>
+      <span class="burbuja" style="--i: 14"></span>
+      <span class="burbuja" style="--i: 21"></span>
+      <span class="burbuja" style="--i: 9"></span>
+      <span class="burbuja" style="--i: 38"></span>
+      <span class="burbuja" style="--i: 3"></span>
+      <span class="burbuja" style="--i: 19"></span>
+      <span class="burbuja" style="--i: 34"></span>
+      <span class="burbuja" style="--i: 8"></span>
+      <span class="burbuja" style="--i: 25"></span>
+      <span class="burbuja" style="--i: 18"></span>
+      <span class="burbuja" style="--i: 29"></span>
+      <span class="burbuja" style="--i: 4"></span>
+      <span class="burbuja" style="--i: 17"></span>
+      <span class="burbuja" style="--i: 24"></span>
+      <span class="burbuja" style="--i: 6"></span>
+      <span class="burbuja" style="--i: 31"></span>
+      <span class="burbuja" style="--i: 23"></span>
+      <span class="burbuja" style="--i: 2"></span>
+      <span class="burbuja" style="--i: 4"></span>
+      <span class="burbuja" style="--i: 36"></span>
+      <span class="burbuja" style="--i: 6"></span>
+      <span class="burbuja" style="--i: 19"></span>
+      <span class="burbuja" style="--i: 5"></span>
+      <span class="burbuja" style="--i: 1"></span>
+      <span class="burbuja" style="--i: 11"></span>
+      <span class="burbuja" style="--i: 27"></span>
+      <span class="burbuja" style="--i: 12"></span>
+      <span class="burbuja" style="--i: 35"></span>
+      <span class="burbuja" style="--i: 26"></span>
+      <span class="burbuja" style="--i: 13"></span>
+      <span class="burbuja" style="--i: 30"></span>
+      <span class="burbuja" style="--i: 15"></span>
+      <span class="burbuja" style="--i: 37"></span>
+      <span class="burbuja" style="--i: 28"></span>
+      <span class="burbuja" style="--i: 33"></span>
+    </div>
+  </body>
+</html>
