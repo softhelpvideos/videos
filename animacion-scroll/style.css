@@ -1,0 +1,59 @@
+body {
+  background: linear-gradient(to bottom, rgb(178, 209, 247), rgb(60, 96, 194));
+  margin: 0;
+  text-align: center;
+  justify-content: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.title {
+  justify-content: center;
+  text-align: center;
+}
+
+p {
+  background: rgba(255, 255, 255, 0.47);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.content {
+  max-width: 80%;
+  margin: 0 auto;
+  margin-top: 70px;
+  margin-bottom: 100px;
+  justify-content: center;
+}
+
+.marvel {
+  width: 60%;
+}
+
+h2 {
+  opacity: 1;
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 32px;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    scale: 40%;
+  }
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+  view-timeline-axis: block;
+  view-timeline-name: --image;
+  animation-timeline: --image;
+  animation-name: show;
+  animation-range: entry 25% cover 50%;
+  animation-fill-mode: both;
+}
