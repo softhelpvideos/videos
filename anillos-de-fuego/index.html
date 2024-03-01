@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Anillos de fuego</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: #111;
+      }
+      .circulo {
+        position: relative;
+        width: 500px;
+        height: 500px;
+        filter: url(#fuego) blur(0.5px);
+      }
+      .circulo::before {
+        content: "";
+        position: absolute;
+        top: 100px;
+        bottom: 100px;
+        right: 100px;
+        left: 100px;
+        border: 25px solid #fff;
+        border-radius: 50%;
+        box-shadow: 0 0 50px lime, inset 0 0 50px lime;
+        animation: efecto 5s linear infinite;
+      }
+      .circulo::after {
+        content: "";
+        position: absolute;
+        top: 100px;
+        bottom: 100px;
+        left: 100px;
+        right: 100px;
+        background: linear-gradient(45deg, transparent 40%, #222);
+        border-radius: 50%;
+        box-shadow: 0 0 10px lime, inset 0 0 20px lime;
+        filter: blur(30px);
+      }
+      @keyframes efecto {
+        0% {
+          box-shadow: 0 0 50px lime, inset 0 0 50px lime;
+          filter: hue-rotate(0deg);
+        }
+        20% {
+          box-shadow: 0 0 60px lime, inset 0 0 60px lime;
+        }
+        40% {
+          box-shadow: 0 0 40px lime, inset 0 0 40px lime;
+        }
+        60% {
+          box-shadow: 0 0 80px lime, inset 0 0 80px lime;
+        }
+        80% {
+          box-shadow: 0 0 100px lime, inset 0 0 100px lime;
+        }
+        100% {
+          box-shadow: 0 0 50px lime, inset 0 0 50px lime;
+          filter: hue-rotate(360deg);
+        }
+      }
+      svg {
+        width: 0;
+        height: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="circulo"></div>
+    <div class="circulo"></div>
+    <svg>
+      <filter id="fuego">
+        <feTurbulence x="0" y="0" baseFrequency="0.009" numOctaves="5" seed="3">
+          <animate
+            attributeName="baseFrequency"
+            dur="60s"
+            values="0.02;0.005;0.02"
+            repeatCount="indefinite"
+          ></animate>
+        </feTurbulence>
+        <feDisplacementMap in="SourceGraphic" scale="30"></feDisplacementMap>
+      </filter>
+    </svg>
+  </body>
+</html>
