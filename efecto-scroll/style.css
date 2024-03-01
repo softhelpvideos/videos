@@ -1,0 +1,8 @@
+.top,
+.bottom {
+  height: 200vh;
+}
+
+html {
+  scroll-behavior: smooth;
+}
