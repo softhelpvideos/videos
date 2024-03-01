@@ -1,0 +1,39 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.youtube-logo {
+  z-index: 1;
+  width: 260px;
+  height: 190px;
+  background: #ff0000;
+  border-radius: 50%/11%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.youtube-logo::before {
+  content: "";
+  position: absolute;
+  background: inherit;
+  top: 10%;
+  bottom: 10%;
+  right: -5%;
+  left: -5%;
+  border-radius: 5%/50%;
+}
+
+.play-button {
+  z-index: 2;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 30px 0 30px 50px;
+  border-color: transparent transparent transparent white;
+}

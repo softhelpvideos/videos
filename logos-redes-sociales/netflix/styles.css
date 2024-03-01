@@ -1,0 +1,63 @@
+body {
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.netflix-logo {
+  height: 250px;
+  width: 150px;
+  position: relative;
+}
+
+.netflix-logo::after {
+  content: "";
+  width: 120%;
+  height: 30px;
+  border-radius: 50%;
+  background: black;
+  position: absolute;
+  left: -10%;
+  bottom: -6%;
+  z-index: 2;
+}
+
+.line {
+  width: 50px;
+  height: 0%;
+  background: #de1c0f;
+  position: absolute;
+}
+
+.left {
+  left: 0;
+  bottom: 0;
+  animation: animation 500ms linear forwards;
+  animation-delay: 500ms;
+}
+
+.center {
+  top: 0;
+  left: 0;
+  transform: skewX(22deg);
+  transform-origin: top left;
+  box-shadow: 0 0 90px black;
+  z-index: 1;
+  animation: animation 500ms linear forwards;
+  animation-delay: 1000ms;
+}
+
+.right {
+  right: 0;
+  bottom: 0;
+  animation: animation 500ms linear forwards;
+  animation-delay: 1500ms;
+}
+
+@keyframes animation {
+  100% {
+    height: 100%;
+  }
+}

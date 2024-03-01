@@ -1,0 +1,27 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.linkedin-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  background: #0a63bc;
+  position: relative;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.in-letters {
+  position: absolute;
+  font-size: 300px;
+  color: white;
+  font-family: system-ui;
+  font-weight: bold;
+  top: -22%;
+}

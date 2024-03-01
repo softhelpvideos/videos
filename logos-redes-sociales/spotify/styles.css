@@ -1,0 +1,112 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.spotify-logo {
+  width: 300px;
+  height: 300px;
+  background-color: #1db954;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transform: 4deg;
+}
+
+.line#one {
+  position: absolute;
+  top: 27%;
+  left: 6%;
+  width: 202px;
+  height: 110px;
+  border: solid 30px white;
+  border-color: white transparent transparent transparent;
+  border-radius: 70%/70px 70px 0 0;
+}
+
+.line#one::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: -11%;
+  left: -4%;
+  border-radius: 50%;
+  background: white;
+}
+.line#one::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: -11%;
+  left: 92%;
+  border-radius: 50%;
+  background: white;
+}
+
+.line#two {
+  position: absolute;
+  top: 44%;
+  left: 10%;
+  width: 191px;
+  height: 108px;
+  border: solid 23px white;
+  border-color: white transparent transparent transparent;
+  border-radius: 70%/70px 70px 0 0;
+}
+
+.line#two::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: -5%;
+  left: -0.5%;
+  border-radius: 50%;
+  background: white;
+}
+.line#two::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: -5%;
+  left: 90%;
+  border-radius: 50%;
+  background: white;
+}
+
+.line#three {
+  position: absolute;
+  top: 61%;
+  left: 18%;
+  width: 154px;
+  height: 110px;
+  border: solid 18px white;
+  border-color: white transparent transparent transparent;
+  border-radius: 100%/70px 70px 0 0;
+}
+
+.line#three::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 14px;
+  top: -4%;
+  left: -1%;
+  border-radius: 50%;
+  background: white;
+}
+.line#three::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 14px;
+  top: -4%;
+  left: 92%;
+  border-radius: 50%;
+  background: white;
+}

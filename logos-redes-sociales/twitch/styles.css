@@ -1,0 +1,54 @@
+body {
+  background: #8c45f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.twitch-icon {
+  width: 300px;
+  height: 320px;
+  background: black;
+  clip-path: polygon(
+    6% 22%,
+    24% 6%,
+    97% 6%,
+    97% 47%,
+    59% 83%,
+    43% 83%,
+    24% 100%,
+    24% 83%,
+    6% 83%
+  );
+}
+
+.message-icon {
+  background: white;
+  width: 210px;
+  height: 210px;
+  clip-path: polygon(
+    8% 0%,
+    20% 0%,
+    100% 0%,
+    100% 50%,
+    70% 80%,
+    45% 80%,
+    26% 100%,
+    25% 80%,
+    8% 80%
+  );
+  position: relative;
+  top: 12%;
+  left: 21%;
+}
+
+.eyes {
+  position: relative;
+  width: 23px;
+  height: 65px;
+  background: black;
+  top: -43%;
+  left: 48%;
+  box-shadow: 64px 0;
+}
