@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #111;
+}
+
+.contenedor {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.caja {
+  position: relative;
+  width: 390px;
+  height: 390px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #333;
+  border-radius: 20px;
+  border: solid 4px #222;
+  z-index: 1;
+}
+
+.contenedor::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: repeating-conic-gradient(
+    from var(--p),
+    #9d02fa 0%,
+    #9d02fa 5%,
+    transparent 5%,
+    transparent 35%,
+    #9d02fa 50%
+  );
+  animation: efecto 4s linear infinite;
+  border-radius: 20px;
+  animation-delay: -1s;
+}
+.contenedor::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: repeating-conic-gradient(
+    from var(--p),
+    #02fa3a 0%,
+    #02fa3a 5%,
+    transparent 5%,
+    transparent 35%,
+    #02fa3a 50%
+  );
+  animation: efecto 4s linear infinite;
+  border-radius: 20px;
+}
+
+@property --p {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes efecto {
+  0% {
+    --p: 0deg;
+  }
+  100% {
+    --p: 360deg;
+  }
+}
+
+.form {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 40px;
+}
+
+.titulo {
+  color: white;
+  font-weight: 600;
+}
+
+.input {
+  position: relative;
+  width: 85%;
+  background: #555;
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+.input::placeholder {
+  color: #bbb;
+}
+
+.input::selection {
+  color: #ddd;
+}
+
+.registrarse {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  font-weight: 600;
+  background: #ddd;
+  color: #000;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.registrarse:hover {
+  background: #9d02fa;
+  color: white;
+}
+
+.grupo {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.link {
+  font-weight: 400;
+}
+
+.link.olvide-contraseña {
+  color: aliceblue;
+  text-decoration: none;
+}
+
+.link.olvide-contraseña:hover {
+  color: #ababab;
+}
+.link.iniciar-sesion {
+  color: #02fa3a;
+  text-decoration: none;
+}
+
+.link.iniciar-sesion:hover {
+  color: #009623;
+}
