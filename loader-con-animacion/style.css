@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #2c3e50; /* Fondo gris oscuro */
+}
+
+.contenedor {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circulo {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  margin: -30px;
+  border-top: 4px solid #e74c3c; /* Rojo anaranjado */
+  animation: palpitar 2s ease-in-out infinite, animacion 4s linear infinite;
+}
+
+@keyframes palpitar {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes animacion {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.circulo::before {
+  content: " ";
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background: #3498db;
+  animation: tintinear 2s linear infinite;
+}
+
+@keyframes tintinear {
+  50% {
+    opacity: 0.7;
+    box-shadow: 0 0 0 10px #3498db, 0 0 0 10px #3498db, 0 0 0 15px #3498db,
+      0 0 0 15px #e74c3c, 0 0 0 20px #e74c3c;
+  }
+}
+
+.circulo:nth-child(3) {
+  position: absolute;
+  top: -66.66px;
+}
+
+.texto {
+  position: absolute;
+  color: white;
+  font-size: 1.5em;
+  font-family: consolas;
+  bottom: -80px;
+  letter-spacing: 0.15em;
+}
