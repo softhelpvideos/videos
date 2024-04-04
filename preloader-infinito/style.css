@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #111;
+  height: 100vh;
+  animation: efectocolor 5s linear infinite;
+}
+
+@keyframes efectocolor {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.contenedor {
+  display: flex;
+}
+
+.infinito {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0 -8px;
+}
+
+.circulo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(calc(var(--i) * 18deg));
+}
+
+.circulo::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: calc(50% - 7.5px);
+  width: 15px;
+  height: 15px;
+  background: lightseagreen;
+  border-radius: 50%;
+  box-shadow: 0 0 10px lightseagreen, 0 0 20px lightseagreen,
+    0 0 40px lightseagreen, 0 0 60px lightseagreen, 0 0 80px lightseagreen,
+    0 0 100px lightseagreen;
+  transform: scale(0.1);
+  animation: efecto 4s linear infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes efecto {
+  0% {
+    transform: scale(1);
+  }
+  50%,
+  100% {
+    transform: scale(0.1);
+  }
+}
+
+.infinito.dos {
+  transform: rotate(180deg);
+}
+
+.infinito.dos .circulo::before {
+  animation-delay: calc(-0.1s * var(--i));
+}
