@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Cubo Giratorio</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: #222;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .contenedor {
+        position: relative;
+      }
+      .cubo {
+        --clr-1: #ff5733;
+        --clr-2: #33ff57;
+        --clr-3: #5733ff;
+        --clr-4: #ff5733;
+        --clr-5: #57ff33;
+        --clr-6: #ff33d1;
+        width: 100px;
+        height: 100px;
+        animation: giratorio 4s infinite linear;
+        transform-style: preserve-3d;
+      }
+      .lado {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transform-style: preserve-3d;
+      }
+      .lado:nth-child(1) {
+        border: 5px solid var(--clr-1);
+        transform: translateZ(-50px) rotateY(180deg);
+      }
+      .lado:nth-child(2) {
+        border: 5px solid var(--clr-2);
+        transform: rotateY(-270deg) translateX(50%);
+        transform-origin: top right;
+      }
+      .lado:nth-child(3) {
+        border: 5px solid var(--clr-3);
+        transform: rotateX(90deg) translateY(-50%);
+        transform-origin: top center;
+      }
+      .lado:nth-child(4) {
+        border: 5px solid var(--clr-4);
+        transform: rotateX(90deg) translateY(-50%);
+        transform-origin: top center;
+      }
+      .lado:nth-child(5) {
+        border: 5px solid var(--clr-5);
+        transform: rotateX(-90deg) translateY(50%);
+        transform-origin: bottom center;
+      }
+      .lado:nth-child(6) {
+        border: 5px solid var(--clr-6);
+        transform: translateZ(50px);
+      }
+      @keyframes giratorio {
+        0% {
+          transform: rotateX(0deg) rotateY(0deg);
+        }
+        100% {
+          transform: rotateX(360deg) rotateY(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contenedor">
+      <div class="cubo">
+        <div class="lado"></div>
+        <div class="lado"></div>
+        <div class="lado"></div>
+        <div class="lado"></div>
+        <div class="lado"></div>
+        <div class="lado"></div>
+      </div>
+    </div>
+  </body>
+</html>
