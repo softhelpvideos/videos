@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cargador {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  -webkit-box-reflect: below 0px linear-gradient(transparent, #00000059);
+}
+
+.cargador:hover {
+  background: lightgreen;
+  box-shadow: 0 0 10px lightgreen;
+}
+
+.lado {
+  position: absolute;
+  display: block;
+}
+
+.lado.uno {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(90deg, transparent, lightgreen);
+  animation: efecto1 2s linear infinite;
+  animation-delay: 0s;
+}
+
+@keyframes efecto1 {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+.lado.tres {
+  bottom: 0;
+  left: -100%;
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(270deg, transparent, lightgreen);
+  animation: efecto3 2s linear infinite;
+  animation-delay: 0s;
+}
+
+@keyframes efecto3 {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+.lado.dos {
+  right: 0;
+  top: -100%;
+  width: 40px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, lightgreen);
+  animation: efecto2 2s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes efecto2 {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+.lado.cuatro {
+  left: 0;
+  top: 100%;
+  width: 40px;
+  height: 100%;
+  background: linear-gradient(0deg, transparent, lightgreen);
+  animation: efecto4 2s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes efecto4 {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: -100%;
+  }
+}
